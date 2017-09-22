@@ -19,6 +19,13 @@
   font-style: normal;
   font-weight: normal; }
 
+@font-face {
+  font-family: 'CSB';
+  src: url("../fonts/Cormorant-SemiBold/Cormorant-SemiBold.eot");
+  src: url("../fonts/Cormorant-SemiBold/Cormorant-SemiBold.eot?iefix") format("eot"), url("../fonts/Cormorant-SemiBold/Cormorant-SemiBold.woff") format("woff"), url("../fonts/Cormorant-SemiBold/Cormorant-SemiBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+
 .wrap {
   background: #000;
   width: 100%;
@@ -29,6 +36,114 @@
   max-width: 1000px;
   margin: 0 auto;
   overflow: hidden; }
+
+.intro-title {
+  background: #fff;
+  text-align: center; }
+  .intro-title p {
+    height: 80px;
+    line-height: 1;
+    text-align: center;
+    font: 100% "CSB";
+    text-transform: uppercase;
+    font-size: 13px;
+    position: relative; }
+    .intro-title p span {
+      color: #b29b70;
+      display: inline-block;
+      position: absolute;
+      top: 2px;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+              transform: translateX(-50%);
+      z-index: 2;
+      padding: 15px 60px;
+      background: #fff; }
+    .intro-title p::after {
+      content: " ";
+      position: absolute;
+      top: 25px;
+      right: 0;
+      width: 100%;
+      height: 1px;
+      background: #b29b70; }
+
+.intro-img {
+  width: 100%;
+  height: 500px;
+  background-position: top center;
+  background-repeat: no-repeat;
+  position: relative;
+  -webkit-background-size: cover;
+          background-size: cover; }
+  .intro-img::after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(8%, transparent), to(rgba(0, 0, 0, 0.9)));
+    background: -webkit-linear-gradient(top, transparent 8%, rgba(0, 0, 0, 0.9) 100%);
+    background: -o-linear-gradient(top, transparent 8%, rgba(0, 0, 0, 0.9) 100%);
+    background: linear-gradient(to bottom, transparent 8%, rgba(0, 0, 0, 0.9) 100%); }
+
+.intro-txt {
+  text-align: center;
+  padding-top: 230px;
+  position: relative;
+  z-index: 3; }
+  .intro-txt h1 {
+    font: 100% "GPR", sans-serif;
+    font-size: 40px;
+    color: #b29b70;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    letter-spacing: 1px; }
+  .intro-txt p {
+    font: 100% "CSB";
+    font-size: 16px;
+    color: #fff;
+    text-transform: uppercase; }
+
+.social {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 4; }
+  .social li {
+    display: block;
+    height: 30px;
+    width: 30px;
+    position: relative; }
+    .social li:first-child a {
+      background-image: url("../img/social.png");
+      background-position: top center;
+      height: 16px; }
+    .social li:last-child a {
+      background-image: url("../img/social.png");
+      background-position: bottom center;
+      height: 11px; }
+    .social li a {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      background-repeat: no-repeat;
+      width: 30px;
+      opacity: .8;
+      -webkit-transition: opacity .1s linear;
+      -o-transition: opacity .1s linear;
+      transition: opacity .1s linear; }
+      .social li a:hover {
+        opacity: 1; }
 
 .block1 {
   width: 100%;
@@ -247,7 +362,24 @@
   .block1-desc p, .block2-desc p, .block3-desc p {
     font-size: 20px; }
   .info-author {
-    padding: 100px 15px; } }
+    padding: 100px 15px; }
+  .intro-img {
+    height: 400px; }
+  .intro-txt {
+    padding-top: 177px; }
+  .social {
+    top: auto;
+    bottom: 10px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%); }
+    .social li {
+      display: inline-block; }
+  .intro-txt h1 {
+    font-size: 31px; }
+  .intro-txt p {
+    font-size: 14px; } }
 
 @media (max-width: 425px) {
   .block1-img {
